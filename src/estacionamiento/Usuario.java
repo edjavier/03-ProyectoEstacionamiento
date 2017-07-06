@@ -5,6 +5,9 @@
  */
 package estacionamiento;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author edjavier
@@ -17,21 +20,25 @@ public class Usuario {
     private String nombre;
     private String nombreUsuario;
     private String password;
+    private List<Permiso> permisos;
     
     //metodo constructor por defecto.
     
     public Usuario(){
+        
+        permisos = new ArrayList<>();
         
     }
     
     //metodo constructor con todos los atributos de la clase.
     //no incluye parametros referenciales.
     
-    public Usuario(String apellido, String nombre, String nombreUsuario, String password){
+    public Usuario(String apellido, String nombre, String nombreUsuario, String password, List<Permiso> permisos){
         this.apellido = apellido;
         this.nombre = nombre;
         this.nombreUsuario = nombreUsuario;
         this.password = password;
+        this.permisos = permisos;
     }
     
     //metodos de seteo de la clase.
@@ -66,5 +73,13 @@ public class Usuario {
     
     public String getPassword(){
         return this.password;
+    }
+    
+    public void setPermisos(List<Permiso> permisos){
+        this.permisos = permisos;
+    }
+    
+    public List<Permiso> getPermisos(){
+        return this.permisos;
     }
 }

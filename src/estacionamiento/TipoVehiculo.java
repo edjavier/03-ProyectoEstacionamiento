@@ -5,6 +5,9 @@
  */
 package estacionamiento;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author edjavier
@@ -15,19 +18,23 @@ public class TipoVehiculo {
     
     private String descripcion;
     private String nombre;
+    private List<Tarifa> tarifas;
     
     //metodo constructor por defecto.
     
     public TipoVehiculo(){
+        
+        tarifas = new ArrayList<>();
         
     }
     
     //metodo constructor con todos los atributos de la clase.
     //no incluye parametros referenciales.
     
-    public TipoVehiculo(String descripcion, String nombre){
+    public TipoVehiculo(String descripcion, String nombre, List<Tarifa> tarifas){
         this.descripcion = descripcion;
         this.nombre = nombre;
+        this.tarifas = tarifas;
     }
     
     //metodos de seteo de la clase.
@@ -46,5 +53,13 @@ public class TipoVehiculo {
     
     public String getNombre(){
         return this.nombre;
+    }
+    
+    public void setTarifas(List<Tarifa> tarifas){
+        this.tarifas = tarifas;
+    }
+    
+    public List<Tarifa> getTarifas(){
+        return this.tarifas;
     }
 }

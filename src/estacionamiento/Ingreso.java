@@ -22,6 +22,10 @@ public class Ingreso {
     private BigDecimal monto;
     private int nroTicket;
     private String observacion;
+    private Usuario usuario;
+    private Porton porton;
+    private Tarifa tarifa;
+    private Vehiculo vehiculo;
     
     //metodo constructor por defecto.
     
@@ -32,13 +36,17 @@ public class Ingreso {
     //metodo constructor con todos los atributos de la clase.
     //no incluye parametros referenciales.
     
-    public Ingreso(long codigoBarra, Date fechaHoraEgreso, Date fechaHoraIngreso, BigDecimal monto, int nroTicket, String observacion){
+    public Ingreso(long codigoBarra, Date fechaHoraEgreso, Date fechaHoraIngreso, BigDecimal monto, int nroTicket, String observacion, Usuario usuario, Porton porton, Tarifa tarifa, Vehiculo vehiculo){
         this.codigoBarra = codigoBarra;
         this.fechaHoraEgreso = fechaHoraEgreso;
         this.fechaHoraIngreso = fechaHoraIngreso;
         this.monto = monto;
         this.nroTicket = nroTicket;
         this.observacion = observacion;
+        this.usuario = usuario;
+        this.porton = porton;
+        this.tarifa = tarifa;
+        this.vehiculo = vehiculo;
     }
     
     //metodos de seteo de la clase.
@@ -89,5 +97,37 @@ public class Ingreso {
     
     public void setObservacion(String observacion){
         this.observacion = observacion;
+    }
+    
+    public Usuario getUsuario(){
+        return this.usuario;
+    }
+    
+    public void setUsuario(Usuario usuario){
+        this.usuario = usuario;
+    }
+    
+    public Porton getPorton(){
+        return this.porton;
+    }
+    
+    public void getPorton(Porton porton){
+        this.porton = porton;
+    }
+    
+    public Tarifa getTarifa(){
+        return this.tarifa;
+    }
+    
+    public void setTarifa(Tarifa tarifa){
+        this.tarifa = tarifa;
+    }
+    
+    public Vehiculo getVehiculo(){
+        return this.vehiculo;
+    }
+    
+    public void setVehiculo(Vehiculo vehiculo){
+        this.vehiculo = vehiculo;
     }
 }

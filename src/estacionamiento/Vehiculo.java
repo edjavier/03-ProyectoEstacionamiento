@@ -14,6 +14,8 @@ public class Vehiculo {
     //atributos de la clase.
     
     private String dominio;
+    private TipoVehiculo tipoVehiculo;
+    private Modelo modelo;
     
     //metodo constructor de la clase.
     
@@ -24,8 +26,10 @@ public class Vehiculo {
     //metodo constructor con todos los atributos de la clase.
     //no incluye los parametros referenciales.
     
-    public Vehiculo(String dominio){
+    public Vehiculo(String dominio, TipoVehiculo tipoVehiculo, Modelo modelo){
         this.dominio = dominio;
+        this.tipoVehiculo = tipoVehiculo;
+        this.modelo = modelo;
     }
     
     //metodos de seteo de la clase.
@@ -36,5 +40,21 @@ public class Vehiculo {
     
     public String getDominio(){
         return this.dominio;
+    }
+    
+    public void setTipoVehiculo(TipoVehiculo tipoVehiculo){
+        this.tipoVehiculo = tipoVehiculo;
+    }
+    
+    public TipoVehiculo getTipoVehiculo(){
+        return this.tipoVehiculo;
+    }
+    
+    public void setModelo(Modelo modelo){
+        this.modelo = modelo;
+    }
+    
+    public Modelo getModelo(){
+        return this.modelo;
     }
 }

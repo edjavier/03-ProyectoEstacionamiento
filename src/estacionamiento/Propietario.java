@@ -5,6 +5,9 @@
  */
 package estacionamiento;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author edjavier
@@ -16,20 +19,24 @@ public class Propietario {
     private String apellido;
     private String nombre;
     private int dni;
+    private  List<Vehiculo> vehiculos;
     
     //metodo constructor por defecto.
     
     public Propietario (){
+        
+        vehiculos = new ArrayList<>();
         
     }
     
     //metodo constructor con todos los atributos de la clase.
     //no incluye parametros referenciales.
     
-    public Propietario (String apellido, String nombre, int dni){
+    public Propietario (String apellido, String nombre, int dni, List<Vehiculo> vehiculos){
         this.apellido = apellido;
         this.nombre = nombre;
         this.dni = dni;
+        this.vehiculos = vehiculos;
     }
     
     //metodos de seteo de la clase.
@@ -56,5 +63,13 @@ public class Propietario {
     
     public int getDni(){
         return this.dni;
+    }
+    
+    public void setVehiculos(List<Vehiculo> vehiculos){
+        this.vehiculos = vehiculos;
+    }
+    
+    public List<Vehiculo> getVehiculos(){
+        return this.vehiculos;
     }
 }
